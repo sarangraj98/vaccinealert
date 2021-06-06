@@ -34,7 +34,7 @@ async function getData() {
                 if (json?.sessions.length > 0) {
                     const objIndex = countMessageSend.findIndex(el => el.pincode === item)
                     json.sessions.forEach(subItem => {
-                        if (subItem.available_capacity > 0 && countMessageSend[objIndex].count <= 5) {
+                        if (countMessageSend[objIndex].count <= 5) {
                             sendMessageToBot(subItem.min_age_limit, subItem.pincode);
                             console.log(countMessageSend)
                         }
