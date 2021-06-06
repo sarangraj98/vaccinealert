@@ -55,7 +55,7 @@ const sendMessageToBot = (ageLimit, pincode) => {
 bot.on('message', (msg) => {
     const chatId = msg.chat.id;
     if (msg.text === '/start') return bot.sendMessage(chatId, 'Thanks for subscribing wait we will notify you!');
-    bot.sendMessage(chatId, 'Hey wait for your turn., We will notify !')
+    bot.sendMessage(chatId, 'Hey wait for your turn., We will notify !',countMessageSend)
 });
 setInterval(() => { getData() }, 5000)
 console.log('************')
