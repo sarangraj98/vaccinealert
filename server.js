@@ -58,5 +58,5 @@ bot.on('message', (msg) => {
     bot.sendMessage(chatId, 'Hey wait for your turn., We will notify !')
 });
 setInterval(() => { getData() }, 5000)
-
+console.log('************')
 
