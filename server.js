@@ -31,7 +31,7 @@ async function getData() {
         })
             .then(res => res.json())
             .then(async (json) => {
-                if (json.sessions.length > 0) {
+                if (json?.sessions.length > 0) {
                     const objIndex = countMessageSend.findIndex(el => el.pincode === item)
                     json.sessions.forEach(subItem => {
                         if (subItem.available_capacity > 0 && countMessageSend[objIndex].count <= 5) {
